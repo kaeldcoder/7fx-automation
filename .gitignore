@@ -38,3 +38,6 @@ logs/
 # *_history.json   (biarkan TIDAK di-ignore)
 # Tapi kalau 'result.json' per-run mau di-skip:
 # **/result.json
+venv/
+node_modules/
+summary_reports/
