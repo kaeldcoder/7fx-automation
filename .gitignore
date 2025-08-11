@@ -13,3 +13,28 @@ build/
 data/
 outputs/
 reports/
+# === Backtest artifacts (generated) ===
+**/Hasil Laporan PDF/**
+**/compact/**
+**/charts/**
+**/temp**/
+**/tmp**/
+**/cache**/
+
+# Logs & sementara
+logs/
+**/*.log
+
+# Notebook cache
+.ipynb_checkpoints/
+
+# (Opsional) Semua gambar hasil chart. 
+# Lebih bagus: taruh gambar ke folder 'charts' di atas biar pattern spesifik.
+# **/*.png
+# **/*.jpg
+# **/*.webp
+
+# JANGAN di-ignore kalau kamu memang mau commit dataset ML:
+# *_history.json   (biarkan TIDAK di-ignore)
+# Tapi kalau 'result.json' per-run mau di-skip:
+# **/result.json
