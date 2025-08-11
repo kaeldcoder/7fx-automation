@@ -1,0 +1,40 @@
+{
+    "tm_config": {
+        "drawdown_mode": "initial_balance",
+        "use_gradual_stop": false,
+        "gradual_stop_percent": 0.0,
+        "use_consecutive_loss_stop": true,
+        "max_consecutive_losses": 2,
+        "timezone": "Asia/Singapore",
+        "cooldown_mode": "next_candle",
+        "profit_target": {
+            "value": 20.0,
+            "type": "percent"
+        },
+        "loss_target": {
+            "value": 10.0,
+            "type": "percent"
+        },
+        "absolute_equity_stop": {
+            "value": 0.0,
+            "type": "amount"
+        },
+        "cooldown_config": {
+            "mode": "next_candle",
+            "timeframe": 16388
+        },
+        "max_concurrent_trades": 1,
+        "order_cooldown_seconds": 2.0
+    },
+    "strategy_configs": [
+        {
+            "symbol": "EURUSD",
+            "timeframe": "M5",
+            "magic_number": 12345,
+            "strategy_class": "BbMacdCounter",
+            "use_smart_exit": true,
+            "exit_strategy_class": "DynamicProfitProtector",
+            "timeframe_int": 5
+        }
+    ]
+}

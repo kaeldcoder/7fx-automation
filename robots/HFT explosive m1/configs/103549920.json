@@ -1,0 +1,39 @@
+{
+    "tm_config": {
+        "drawdown_mode": "initial_balance",
+        "use_gradual_stop": false,
+        "gradual_stop_percent": 0.0,
+        "use_consecutive_loss_stop": false,
+        "max_consecutive_losses": 0,
+        "timezone": "Asia/Singapore",
+        "cooldown_mode": "next_candle",
+        "profit_target": {
+            "value": 10.0,
+            "type": "percent"
+        },
+        "loss_target": {
+            "value": 6.0,
+            "type": "amount"
+        },
+        "absolute_equity_stop": {
+            "value": 0.0,
+            "type": "amount"
+        },
+        "cooldown_config": {
+            "mode": "next_candle",
+            "timeframe": 5
+        },
+        "max_concurrent_trades": 1,
+        "order_cooldown_seconds": 0.1
+    },
+    "strategy_configs": [
+        {
+            "symbol": "XAUUSD",
+            "timeframe": "M5",
+            "magic_number": 12345,
+            "strategy_class": "hma_strat",
+            "use_smart_exit": false,
+            "timeframe_int": 5
+        }
+    ]
+}

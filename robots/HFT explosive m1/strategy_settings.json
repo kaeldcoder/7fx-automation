@@ -1,0 +1,13 @@
+[
+    {
+        "symbol": "EURUSD.s",
+        "timeframe": "M1",
+        "ema_period": 50,
+        "risk_per_trade": 0.5,
+        "magic_number": 12346,
+        "rr_ratio": 1.5,
+        "sl_lookback": 3,
+        "spread_tolerance": 1.3,
+        "timeframe_int": 1
+    }
+]

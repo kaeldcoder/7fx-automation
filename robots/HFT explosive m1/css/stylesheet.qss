@@ -1,0 +1,643 @@
+/* --- FONT & WARNA DASAR --- */
+#MainCentralWidget {
+    font-family: "Lato";
+    background-color: #132d46; /* Warna solid untuk Main Dashboard */
+    border-radius: 10px;
+}
+
+#PanelCentralWidget {
+    font-family: "Lato";
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #1A1E29, stop:1 #132D46); /* Gradien untuk Panel Kontrol */
+    border-radius: 10px;
+}
+QLabel {
+    color: #FFFFFF;
+    font-size: 13px;
+    background-color: transparent;
+}
+
+/* --- HEADER --- */
+#Header {
+    background-color: #1A1E29;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #6A6E79;
+}
+/* Style untuk HeaderTitle default (di Main Dashboard) */
+#HeaderTitle {
+    font-family: "Oswald";
+    color: #FFFFFF; /* <-- Kembalikan ke warna putih */
+    font-size: 14px; 
+    font-weight: bold; 
+    padding-left: 10px;
+}
+
+/* Style KHUSUS untuk HeaderTitle di dalam Panel Kontrol */
+#PanelCentralWidget #HeaderTitle {
+    color: #01c38e;
+}
+
+#ControlButton { background-color: transparent; border: none; border-radius: 5px; }
+#ControlButton:hover { background-color: #6A6E79; }
+#SpinBoxUpButton, #SpinBoxDownButton {
+    background-color: #1F2430;
+    color: #FFFFFF;
+    border: 1px solid #6A6E79;
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+#SpinBoxUpButton {
+    border-top-right-radius: 5px;
+}
+#SpinBoxDownButton {
+    border-bottom-right-radius: 5px;
+}
+#SpinBoxUpButton:hover, #SpinBoxDownButton:hover {
+    background-color: #2A2E39;
+    border-color: #01C38E;
+}
+#SpinBoxUpButton:disabled, #SpinBoxDownButton:disabled {
+    background-color: rgba(26, 30, 41, 0.7);
+    color: #4A4E59;
+    border: 1px solid #2A2E39;
+}
+#Sidebar {
+    /* Gradien vertikal dari biru gelap ke versi yang sedikit lebih gelap */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                    stop:0 #1A1E29, stop:1 #132D46);
+    border-bottom-left-radius: 10px;
+}
+
+#SidebarWrapper{
+    width:100%;
+}
+
+/* --- SCROLLBAR STYLING KUSTOM (Sangat Penting untuk Tampilan) --- */
+QScrollBar:vertical {
+    border: none;
+    background-color: #1A1E29; /* Warna background area scroll */
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background-color: #01C38E; /* Warna utama brand */
+    min-height: 25px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #FFFFFF; /* Warna hover */
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+#MenuButton {
+    background-color: transparent;
+    border: none;
+    color: #6a6e79;
+    padding: 10px 15px; /* Padding untuk konten di dalamnya */
+    font-family: "TT Commons Pro Condensed", "Lato"; 
+    font-size: 14px; 
+    font-weight: bold;
+    text-align: left;
+    border-radius: 10px; /* Sudut tumpul untuk semua state */
+    margin: 0 5px; /* Beri jarak dari tepi sidebar */
+}
+#MenuButton:hover {
+    color: #ffffff;
+    background-color: #132d46; /* Biru terang saat hover */
+}
+#MenuButton:checked {
+    color: #ffffff;
+    background-color: #01c38e; /* Warna hijau utama saat aktif */
+}
+#ToggleButton { 
+    background-color: transparent; 
+    border: none;
+    color: #ffffff;
+    border-radius: 10px; /* Tambahkan ini agar hover terlihat bagus */
+}
+/* EFEK HOVER BARU */
+#ToggleButton:hover {
+    background-color: #132d46; /* Warna biru terang saat hover */
+}
+#ToolbarFrame {
+    margin-bottom: 10px;
+}
+
+#AccountActionButton {
+    background-color: #1A1E29; /* Biru gelap */
+    color: #FFFFFF;
+    border: 1px solid #6A6E79;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: "TT Commons Pro Condensed", "Lato";
+    font-weight: bold;
+}
+#AccountActionButton:hover {
+    background-color: #6A6E79;
+    border: 1px solid #FFFFFF;
+}  
+#BrowseButton {
+    background-color: #132d46;
+    border: 1px solid #6A6E79;
+    border-radius: 5px;
+    min-width: 40px;
+    min-height: 38px;
+}
+#BrowseButton:hover {
+    background-color: #6A6E79;
+}
+
+#TelegramButton {
+    background-color: transparent;
+    border: 1px solid #29A9EA;
+    color: #29A9EA;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+#TelegramButton:hover {
+    background-color: #29A9EA;
+    color: white;
+}
+
+/* --- STYLING UNTUK TABS DI HALAMAN SETTINGS --- */
+QTabWidget::pane {
+    /* Hapus border pane agar menyatu dengan background */
+    border: none;
+}
+
+QTabBar::tab {
+    background-color: transparent;
+    color: #6a6e79;
+    padding: 10px 20px;
+    font-family: "TT Commons Pro Condensed", "Lato"; 
+    font-size: 14px; 
+    font-weight: bold;
+    border: none;
+    /* Garis bawah transparan sebagai dasar */
+    border-bottom: 2px solid transparent;
+}
+QSpinBox, QDoubleSpinBox {
+    background-color: #1F2430;
+    color: #FFFFFF;
+    border: 1px solid #6A6E79;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+QSpinBox:focus, QDoubleSpinBox:focus {
+    border: 2px solid #01C38E;
+}
+
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+    subcontrol-origin: border;
+    width: 22px;
+    border-left: 1px solid #2A2E39;
+}
+
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    width: 22px;
+    border-left: 1px solid #2A2E39;
+}
+QSpinBox:disabled, QDoubleSpinBox:disabled, QComboBox:disabled {
+    background-color: rgba(26, 30, 41, 0.7); /* Warna lebih redup dan transparan */
+    color: #4A4E59; /* Warna teks abu-abu */
+    border: 1px solid #2A2E39;
+}
+QSpinBox::up-arrow, QDoubleSpinBox::up-arrow {
+    image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tdXAiPjxwb2x5bGluZSBwb2ludHM9IjE4IDE1IDEyIDkgNiAxNSI+PC9wb2x5bGluZT48L3N2Zz4=);
+    width: 12px;
+    height: 12px;
+}
+
+QSpinBox::down-arrow, QDoubleSpinBox::down-arrow {
+    image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tZG93biI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1MCI+PC9wb2x5bGluZT48L3N2Zz4=);
+    width: 12px;
+    height: 12px;
+}
+QTabBar::tab:hover {
+    color: #FFFFFF;
+}
+
+QTabBar::tab:selected {
+    color: #FFFFFF;
+    /* Garis bawah aksen saat tab aktif */
+    border-bottom: 2px solid #01c38e; 
+}
+/* --- KONTEN & WIDGET UMUM --- */
+#MainContent { background-color: transparent; }
+QGroupBox {
+    font-family: "TT Commons Pro Condensed";
+    color: #FFFFFF; /* <-- Kembalikan ke warna putih */
+    font-size: 16px; 
+    font-weight: bold;
+    border: 1px solid #1A1E29; 
+    border-radius: 8px;
+    margin-top: 10px; 
+    padding: 15px;
+}
+QGroupBox#LogGroup QTextEdit { /* Targetkan QTextEdit di dalam QGroupBox dengan ID LogGroup */
+    min-height: 150px; /* Tambah tinggi minimum */
+    border-radius: 8px; /* Tambah sudut melengkung */
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 5px;
+    font-family: "Consolas", monospace; /* Font monospace lebih baik untuk log */
+    font-size: 10pt;
+    border: 1px solid #283446; /* Tambah border tipis agar terlihat */
+}
+#StrategyPairTabs QScrollArea > QWidget > QWidget {
+    background-color: transparent;
+}
+#StrategyPairTabs QGroupBox {
+    background-color: #1A1E29;
+    border: 1px solid #283446;
+    padding-top: 20px;
+}
+/* [BARU] Style untuk container info strategi di monitor */
+#StrategyContainer {
+    border: 1px solid #283446;
+    border-radius: 8px;
+}
+#VSeparator {
+    background-color: #283446;
+    max-width: 1px;
+}
+
+/* [BARU] Atur padding konten di dalam kotak strategi */
+#StrategyContainer QVBoxLayout {
+    padding: 10px;
+}
+/* [BARU] Style untuk mengecilkan FONT JUDUL di dalam kotak strategi */
+#StrategyContainer QGroupBox {
+    font-size: 13px; /* Ukuran font lebih kecil */
+    font-weight: normal; /* Tidak tebal */
+    color: #01c38e;
+}
+/* Targetkan QGroupBox log secara spesifik agar bisa diberi ID */
+QGroupBox#LogGroup {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "TT Commons Pro Condensed";
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Style KHUSUS untuk QGroupBox di dalam Panel Kontrol */
+#PanelCentralWidget QGroupBox {
+    color: #01c38e;
+}
+QGroupBox::title {
+    subcontrol-origin: padding; /* <-- [DIPERBAIKI] */
+    subcontrol-position: top left;
+    padding: 0 10px; /* Sedikit tambah padding agar tidak terlalu mepet */
+    left: 10px;
+}
+
+QTableWidget {
+    background-color: #1A1E29; /* Latar biru gelap */
+    color: #FFFFFF;
+    border: none; /* Hapus border luar */
+    gridline-color: transparent; /* Hapus garis grid */
+    alternate-background-color: #1F2430; /* Warna selang-seling yang halus */
+    border-radius: 8px; /* <-- TAMBAHKAN BARIS INI untuk menumpulkan sudut */
+}
+QHeaderView::section {
+    background-color: #1A1E29; /* <-- UBAH menjadi warna solid */
+    color: #6A6E79; /* Warna teks abu-abu */
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #6A6E79; /* Garis bawah sebagai pemisah */
+    font-family: "Oswald";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+QHeaderView::section:horizontal:first {
+    border-top-left-radius: 7px;
+}
+QHeaderView::section:horizontal:last {
+    border-top-right-radius: 7px;
+}
+QTableView QHeaderView {
+    background-color: transparent;
+}
+/* Menghilangkan background aneh di pojok kiri atas tabel */
+QTableWidget QTableCornerButton::section {
+    background-color: #1A1E29;
+    border: none;
+}
+QTableWidget::item {
+    padding: 12px 5px; /* Beri padding vertikal lebih banyak */
+    border: none; /* Hapus border antar sel */
+}
+QTableWidget::item:selected {
+    background-color: rgba(1, 195, 142, 0.3); /* Warna hijau transparan saat dipilih */
+    color: #FFFFFF;
+}
+
+/* -- Kartu KPI (Hanya styling dasar) -- */
+#KPICard { background-color: #1A1E29; border-radius: 8px; }
+#KPITitle { 
+    font-family: "TT Commons Pro Condensed";
+    color: #6A6E79; font-size: 12px; font-weight: bold; text-transform: uppercase; 
+}
+#KPIValue { 
+    font-family: "Oswald";
+    color: #FFFFFF; font-size: 24px; font-weight: bold; 
+}
+/* --- Area Scroll Bubble --- */
+#BubbleScrollArea, #BubbleScrollContainer {
+    background-color: transparent;
+    border: none;
+}
+
+/* --- Tombol Add Account Mengambang --- */
+#FloatingAddButton {
+    background-color: transparent;
+    border: 2px dashed #6A6E79; /* Border putus-putus */
+    border-radius: 10px;
+    color: #6A6E79;
+    padding: 20px;
+    font-family: "TT Commons Pro Condensed", "Lato";
+    font-size: 16px;
+    font-weight: bold;
+}
+#FloatingAddButton:hover {
+    background-color: rgba(1, 195, 142, 0.2); /* Latar hijau transparan */
+    border: 2px solid #01C38E; /* Border hijau solid */
+    color: #FFFFFF;
+}
+
+/* --- Kartu Bubble Akun --- */
+#AccountBubble {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, 
+                                    stop:0 #1A1E29, stop:1 #132d46);
+    border: 1px solid #6A6E79;
+    border-radius: 10px;
+}
+#AccountBubble:hover {
+    border: 1px solid #01C38E; /* Aksen hijau saat hover */
+}
+
+/* --- Teks di dalam Bubble --- */
+#BubbleAccountNumber {
+    font-family: "Oswald";
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+#BubbleSubText {
+    color: #6A6E79;
+    font-size: 12px;
+}
+
+/* --- Pil Status --- */
+#BubbleStatusPill {
+    font-family: "TT Commons Pro Condensed", "Lato";
+    font-weight: bold;
+    color: #FFFFFF; /* Warna default jika status tidak terdefinisi */
+    padding: 5px 10px;
+    min-width: 100px;
+    max-width: 100px;
+    /* [DIUBAH] Latar belakang transparan dan tanpa border */
+    background-color: transparent;
+    border: none;
+}
+/* [DIUBAH] Aturan status sekarang mengganti 'color' (warna teks) */
+#BubbleStatusPill[status="offline"] { color: #E74C3C; } /* Merah */
+#BubbleStatusPill[status="running"] { color: #2ECC71; } /* Hijau */
+#BubbleStatusPill[status="cooldown"] { color: #F39C12; } /* Oranye */
+#BubbleStatusPill[status="standby"] { color: #6A6E79; } /* Abu-abu */
+#BubbleStatusPill[status="launching..."] { color: #3498DB; } /* Biru */
+#BubbleStatusPill[status="crashed"] { color: #9B59B6; } /* Ungu */
+#BubbleStatusPill[status="unresponsive"] { color: #E67E22; } /* Oranye Tua */
+#BubbleStatusPill[status="killed"] { color: #95A5A6; } /* Abu-abu terang */
+#BubbleStatusPill[status="stalled"] { color: #E67E22; } /* Oranye Tua */
+#BubbleStatusPill[status="stopped"] { color: #E74C3C; } /* Merah */
+/* --- Tombol Aksi di dalam Bubble --- */
+#BubbleActionButton {
+    background-color: transparent;
+    border: 1px solid #6A6E79;
+    border-radius: 16px; /* Membuatnya bulat sempurna */
+}
+#BubbleActionButton:hover {
+    background-color: #6A6E79;
+    border: 1px solid #FFFFFF;
+}
+#BubbleActionButton[class="kill"]:hover {
+    background-color: #E74C3C; /* Warna merah */
+    border: 1px solid #ff6b5b;  /* Border merah lebih terang */
+}
+#StyledDialog {
+    background-color: transparent; /* Kulit luar harus transparan */
+    border: none
+}
+#StyledDialog #HeaderTitle {
+    color: #01c38e; /* Warna hijau tosca */
+}
+#DialogMainWidget {
+    background-color: #1A1E29; /* Latar biru gelap diatur di sini */
+    border-radius: 8px;
+    border: 1px solid #6A6E79;
+}
+#DialogHeader {
+    background-color: transparent; /* Header transparan agar menyatu dengan latar */
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+#DialogHeaderTitle {
+    font-family: "TT Commons Pro Condensed", "Lato";
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+#DialogControlButton {
+    background-color: transparent; 
+    border: none; 
+    border-radius: 5px;
+}
+#DialogControlButton:hover { 
+    background-color: #6A6E79; 
+}
+#DialogButton {
+    background-color: #132d46; /* Latar biru terang */
+    color: #FFFFFF;
+    border: 1px solid #6A6E79; /* Border abu-abu */
+    border-radius: 8px; /* Sudut tumpul */
+    padding: 8px 15px; /* Jarak antara teks dan tepi tombol */
+    font-family: "TT Commons Pro Condensed", "Lato";
+    font-weight: bold;
+    min-width: 80px; /* Lebar minimum tombol */
+}
+#DialogButton:hover {
+    background-color: #6A6E79; /* Latar abu-abu saat hover */
+    border: 1px solid #FFFFFF;
+}
+#DialogButton:pressed {
+    background-color: #01C38E; /* Latar hijau utama saat ditekan */
+    border: 1px solid #01C38E;
+}
+QLineEdit {
+    background-color: #1F2430;
+    color: #FFFFFF;
+    border: 1px solid #6A6E79;
+    border-radius: 5px;
+    padding: 8px;
+    selection-background-color: #01C38E;
+    selection-color: #FFFFFF;
+}
+#QLineEdit:focus {
+    border: 2px solid #01C38E;
+}
+
+QComboBox {
+    background-color: #1F2430;
+    color: #FFFFFF;
+    border: 1px solid #6A6E79;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+QComboBox:hover {
+    border: 1px solid #01C38E;
+}
+
+QComboBox::drop-down {
+    border: 0px;
+    width: 25px;
+}
+
+QComboBox::down-arrow {
+    image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tZG93biI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiPjwvcG9seWxpbmU+PC9zdmc+);
+    width: 14px;
+    height: 14px;
+}
+
+QComboBox::down-arrow:open {
+    image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tdXAiPjxwb2x5bGluZSBwb2ludHM9IjE4IDE1IDEyIDkgNiAxNSI+PC9wb2x5bGluZT48L3N2Zz4=);
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1F2430;
+    color: #FFFFFF;
+    border: 1px solid #01C38E;
+    selection-background-color: #01C38E;
+}
+
+QCheckBox, QCheckBox QLabel {
+    color: #FFFFFF !important; /* !important untuk memaksa warna putih */
+    spacing: 10px;
+}
+
+#QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #6A6E79;
+    background: transparent;
+    border-radius: 5px;
+}
+
+#QCheckBox::indicator:hover {
+    border: 2px solid #01C38E;
+}
+
+#QCheckBox::indicator:checked {
+    background-color: #01C38E;
+    border: 2px solid #01C38E;
+    /* Anda bisa menambahkan gambar centang di sini jika punya */
+    /* image: url(path/to/checkmark.png); */
+}
+#ScanButton {
+    background-color: transparent;
+    border: 1px solid #6A6E79;
+    color: #FFFFFF;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#ScanButton:hover {
+    background-color: #6A6E79;
+}
+
+/* Tombol Dialog (Cancel, No, dll.) */
+#DialogButton {
+    background-color: #132d46;
+    color: #FFFFFF;
+    border: 1px solid #6A6E79;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: bold;
+    min-width: 80px;
+}
+#DialogButton:hover {
+    background-color: #6A6E79;
+    border: 1px solid #FFFFFF;
+}
+
+/* Tombol Aksi Utama (OK, Yes, Save) */
+#DialogButton[class="affirmative"] {
+    background-color: #01C38E; /* Warna hijau utama */
+    border: 1px solid #01C38E;
+}
+#DialogButton[class="affirmative"]:hover {
+    background-color: #01e0a4; /* Warna hijau lebih terang */
+    border: 1px solid #01e0a4;
+}
+/* --- Progress Dialog --- */
+QProgressDialog {
+    background-color: #1A1E29;
+    border: 1px solid #6A6E79;
+}
+QProgressDialog QLabel {
+    color: #FFFFFF;
+}
+QComboBox:hover {
+    border: 1px solid #01C38E; /* Border hijau saat hover */
+}
+
+/* --- Progress Bar Styling --- */
+QProgressBar {
+    border: 1px solid #6A6E79;
+    border-radius: 8px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #132d46;
+}
+QProgressBar::chunk {
+    background-color: #01C38E; /* Warna hijau utama */
+    border-radius: 7px;
+}
+QSplitter::handle {
+    background-color: #1A1E29; /* Warna gelap agar menyatu */
+}
+QSplitter::handle:vertical {
+    height: 4px;
+}
+QSplitter::handle:horizontal {
+    width: 4px;
+}
+QSplitter::handle:hover {
+    background-color: #6A6E79; /* Warna abu-abu saat disentuh mouse */
+}
+QTabWidget#StrategyPairTabs::pane {
+    border: 1px solid #283446;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* [BARU] Terapkan style standar ke Magic Number Input */
+QLineEdit#MagicNumberInput {
+    background-color: #1F2430;
+    color: #FFFFFF;
+    border: 1px solid #6A6E79;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+QLineEdit#MagicNumberInput:focus {
+    border: 2px solid #01C38E;
+}

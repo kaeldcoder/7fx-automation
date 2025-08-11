@@ -1,0 +1,63 @@
+{
+    "tm_config": {
+        "drawdown_mode": "initial_balance",
+        "use_gradual_stop": true,
+        "gradual_stop_percent": 15.0,
+        "use_consecutive_loss_stop": false,
+        "max_consecutive_losses": 0,
+        "timezone": "Asia/Singapore",
+        "cooldown_mode": "next_candle",
+        "profit_target": {
+            "value": 40.0,
+            "type": "percent"
+        },
+        "loss_target": {
+            "value": 20.0,
+            "type": "percent"
+        },
+        "absolute_equity_stop": {
+            "value": 1500.0,
+            "type": "amount"
+        },
+        "cooldown_config": {
+            "mode": "next_candle",
+            "timeframe": 16388
+        },
+        "max_concurrent_trades": 30,
+        "order_cooldown_seconds": 1.5
+    },
+    "strategy_configs": [
+        {
+            "symbol": "EURUSD.s",
+            "timeframe": "M1",
+            "magic_number": 12345,
+            "strategy_class": "HeikenAshiMaScalp",
+            "ema_channel_period": 55,
+            "risk_per_trade": 0.3,
+            "rr_ratio": 1.2,
+            "spread_tolerance": 1.0,
+            "use_smart_exit": false,
+            "timeframe_int": 1
+        },
+        {
+            "symbol": "EURGBP.s",
+            "timeframe": "M1",
+            "magic_number": 12346,
+            "strategy_class": "BbMacdCounter",
+            "bb_fast_period": 20,
+            "bb_fast_std": 2.0,
+            "bb_slow_period": 100,
+            "bb_slow_std": 2.0,
+            "macd_fast": 12,
+            "macd_slow": 26,
+            "macd_signal": 9,
+            "risk_per_trade": 0.3,
+            "use_smart_exit": true,
+            "exit_strategy_class": "DynamicProfitProtector",
+            "breakeven_rr_ratio": 1.0,
+            "atr_trail_period": 14,
+            "atr_trail_multiplier": 3.0,
+            "timeframe_int": 1
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "drawdown_mode": "initial_balance",
+    "use_gradual_stop": true,
+    "gradual_stop_percent": 3.0,
+    "use_consecutive_loss_stop": false,
+    "max_consecutive_losses": 0,
+    "timezone": "Asia/Singapore",
+    "cooldown_mode": "next_candle",
+    "profit_target": {
+        "value": 50.0,
+        "type": "percent"
+    },
+    "loss_target": {
+        "value": 20.0,
+        "type": "percent"
+    },
+    "absolute_equity_stop": {
+        "value": 10.0,
+        "type": "percent"
+    },
+    "cooldown_config": {
+        "mode": "next_candle",
+        "timeframe": 16388
+    }
+}

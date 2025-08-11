@@ -1,0 +1,69 @@
+{
+    "tm_config": {
+        "drawdown_mode": "initial_balance",
+        "use_gradual_stop": true,
+        "gradual_stop_percent": 15.0,
+        "use_consecutive_loss_stop": false,
+        "max_consecutive_losses": 0,
+        "timezone": "Asia/Singapore",
+        "cooldown_mode": "next_candle",
+        "profit_target": {
+            "value": 40.0,
+            "type": "percent"
+        },
+        "loss_target": {
+            "value": 20.0,
+            "type": "percent"
+        },
+        "absolute_equity_stop": {
+            "value": 750.0,
+            "type": "amount"
+        },
+        "cooldown_config": {
+            "mode": "next_candle",
+            "timeframe": 16388
+        },
+        "max_concurrent_trades": 30,
+        "order_cooldown_seconds": 1.5
+    },
+    "strategy_configs": [
+        {
+            "symbol": "GBPUSD.s",
+            "timeframe": "M1",
+            "magic_number": 12345,
+            "strategy_class": "EmaAdxFilter",
+            "ema_period": 50,
+            "adx_period": 14,
+            "adx_threshold": 25,
+            "risk_per_trade": 1.0,
+            "rr_ratio": 1.5,
+            "sl_lookback": 5,
+            "spread_tolerance": 1.8,
+            "use_smart_exit": true,
+            "exit_strategy_class": "DynamicProfitProtector",
+            "breakeven_rr_ratio": 1.0,
+            "atr_trail_period": 14,
+            "atr_trail_multiplier": 2.5,
+            "timeframe_int": 1
+        },
+        {
+            "symbol": "EURUSD.s",
+            "timeframe": "M1",
+            "magic_number": 12346,
+            "strategy_class": "EmaRsiPullback",
+            "ema_period": 200,
+            "rsi_period": 14,
+            "rsi_oversold_level": 40,
+            "rsi_overbought_level": 60,
+            "risk_per_trade": 1.0,
+            "rr_ratio": 1.5,
+            "spread_tolerance": 1.5,
+            "use_smart_exit": true,
+            "exit_strategy_class": "DynamicProfitProtector",
+            "breakeven_rr_ratio": 1.0,
+            "atr_trail_period": 14,
+            "atr_trail_multiplier": 3.0,
+            "timeframe_int": 1
+        }
+    ]
+}

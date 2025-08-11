@@ -1,0 +1,48 @@
+{
+    "tm_config": {
+        "drawdown_mode": "initial_balance",
+        "use_gradual_stop": false,
+        "gradual_stop_percent": 0.0,
+        "use_consecutive_loss_stop": false,
+        "max_consecutive_losses": 0,
+        "timezone": "Asia/Singapore",
+        "cooldown_mode": "next_day_at",
+        "profit_target": {
+            "value": 20.0,
+            "type": "percent"
+        },
+        "loss_target": {
+            "value": 10.0,
+            "type": "percent"
+        },
+        "absolute_equity_stop": {
+            "value": 1000.0,
+            "type": "amount"
+        },
+        "cooldown_config": {
+            "mode": "next_day_at",
+            "time": "21:30"
+        },
+        "max_concurrent_trades": 30,
+        "order_cooldown_seconds": 1.5
+    },
+    "strategy_configs": [
+        {
+            "symbol": "EURUSD.s",
+            "timeframe": "M1",
+            "magic_number": 12345,
+            "strategy_class": "EmaTrendBasic",
+            "ema_period": 50,
+            "risk_per_trade": 0.30000000000000004,
+            "rr_ratio": 1.5,
+            "sl_lookback": 3,
+            "spread_tolerance": 1.5,
+            "use_smart_exit": true,
+            "exit_strategy_class": "DynamicProfitProtector",
+            "breakeven_rr_ratio": 1.0,
+            "atr_trail_period": 14,
+            "atr_trail_multiplier": 3.0,
+            "timeframe_int": 1
+        }
+    ]
+}

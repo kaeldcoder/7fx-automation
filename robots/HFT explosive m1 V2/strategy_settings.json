@@ -1,0 +1,57 @@
+[
+    {
+        "symbol": "XAUUSD.s",
+        "timeframe": "M1",
+        "ema_period": 50,
+        "risk_per_trade": 0.3,
+        "rr_ratio": 1.6,
+        "sl_lookback": 6,
+        "spread_tolerance": 1.5,
+        "magic_number": 12345,
+        "timeframe_int": 1
+    },
+    {
+        "symbol": "EURUSD.s",
+        "timeframe": "M1",
+        "ema_period": 50,
+        "risk_per_trade": 0.5,
+        "rr_ratio": 1.5,
+        "sl_lookback": 5,
+        "spread_tolerance": 1.5,
+        "magic_number": 12346,
+        "timeframe_int": 1
+    },
+    {
+        "symbol": "GBPUSD.s",
+        "timeframe": "M1",
+        "ema_period": 50,
+        "risk_per_trade": 0.75,
+        "rr_ratio": 1.5,
+        "sl_lookback": 5,
+        "spread_tolerance": 1.5,
+        "magic_number": 12347,
+        "timeframe_int": 1
+    },
+    {
+        "symbol": "AUDUSD.s",
+        "timeframe": "M1",
+        "ema_period": 50,
+        "risk_per_trade": 0.5,
+        "rr_ratio": 1.5,
+        "sl_lookback": 5,
+        "spread_tolerance": 1.5,
+        "magic_number": 12348,
+        "timeframe_int": 1
+    },
+    {
+        "symbol": "USDJPY.s",
+        "timeframe": "M1",
+        "ema_period": 50,
+        "risk_per_trade": 0.75,
+        "rr_ratio": 1.5,
+        "sl_lookback": 5,
+        "spread_tolerance": 1.5,
+        "magic_number": 12349,
+        "timeframe_int": 1
+    }
+]

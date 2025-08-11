@@ -1,0 +1,36 @@
+[
+  {
+    "run_id": "L2.0_W24_S1430-1930_ADX(F)_SL(F)",
+    "metadata": {
+      "symbol": "XAUUSD",
+      "backtest_year": 2025,
+      "run_timestamp": "2025-08-08T16:33:00Z",
+      "pdf_report_path": "Backtester/Hasil Laporan PDF/XAUUSD/2025/NoFilter/wave(24)/lot(2.0)/1430-1930/FINAL_REPORT_XAUUSD_E10000_....pdf"
+    },
+    "parameters": {
+      "lot_size": 2.0,
+      "wave_period": 24,
+      "trade_start_time": "14:30",
+      "trade_end_time": "19:30",
+      "use_adx": false,
+      "adx_period": 14,
+      "adx_threshold": 15,
+      "use_stop_loss": false,
+      "stop_loss_points": 10.0
+    },
+    "performance_summary": {
+      "total_profit_usd": 7850.50,
+      "win_rate_percent": 62.5,
+      "total_trades": 128,
+      "initial_balance_usd": 10000.0,
+      "final_balance_usd": 17850.50
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": 15.2,
+      "max_drawdown_usd": -2500.75,
+      "peak_equity_usd": 18200.00,
+      "trough_equity_usd": 15699.25
+    },
+    "balance_score": 3.14
+  }
+]

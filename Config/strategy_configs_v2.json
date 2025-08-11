@@ -1,0 +1,72 @@
+{
+    "XAUUSD.s": {
+        "symbol": "XAUUSD.s",
+        "magic_number": 263592,
+        "risk_per_trade": 1.0,
+        "risk_reward_ratio": 2.0,
+        "ema_macro_period": 50,
+        "ema_fast_period": 9,
+        "ema_slow_period": 21,
+        "rsi_period": 14,
+        "rsi_mid_level": 50,
+        "atr_period": 14,
+        "atr_sma_period": 20,
+        "sl_atr_multiplier": 1.5
+    },
+    "EURUSD.s": {
+        "symbol": "EURUSD.s",
+        "magic_number": 220154,
+        "risk_per_trade": 1.0,
+        "risk_reward_ratio": 2.0,
+        "ema_macro_period": 50,
+        "ema_fast_period": 9,
+        "ema_slow_period": 21,
+        "rsi_period": 14,
+        "rsi_mid_level": 50,
+        "atr_period": 14,
+        "atr_sma_period": 20,
+        "sl_atr_multiplier": 1.5
+    },
+    "AUDUSD.s": {
+        "symbol": "AUDUSD.s",
+        "magic_number": 222756,
+        "risk_per_trade": 1.0,
+        "risk_reward_ratio": 2.0,
+        "ema_macro_period": 50,
+        "ema_fast_period": 9,
+        "ema_slow_period": 21,
+        "rsi_period": 14,
+        "rsi_mid_level": 50,
+        "atr_period": 14,
+        "atr_sma_period": 20,
+        "sl_atr_multiplier": 1.5
+    },
+    "GBPUSD.s": {
+        "symbol": "GBPUSD.s",
+        "magic_number": 208758,
+        "risk_per_trade": 1.0,
+        "risk_reward_ratio": 2.0,
+        "ema_macro_period": 50,
+        "ema_fast_period": 9,
+        "ema_slow_period": 21,
+        "rsi_period": 14,
+        "rsi_mid_level": 50,
+        "atr_period": 14,
+        "atr_sma_period": 20,
+        "sl_atr_multiplier": 1.5
+    },
+    "USDJPY.s": {
+        "symbol": "USDJPY.s",
+        "magic_number": 281681,
+        "risk_per_trade": 1.0,
+        "risk_reward_ratio": 2.0,
+        "ema_macro_period": 50,
+        "ema_fast_period": 9,
+        "ema_slow_period": 21,
+        "rsi_period": 14,
+        "rsi_mid_level": 50,
+        "atr_period": 14,
+        "atr_sma_period": 20,
+        "sl_atr_multiplier": 1.5
+    }
+}
